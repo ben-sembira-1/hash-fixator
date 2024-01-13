@@ -1,0 +1,1 @@
+../hash-fixator.sh
