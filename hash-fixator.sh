@@ -1,5 +1,8 @@
 #!/bin/bash
 
+pushd $(dirname "$0") > /dev/null
+trap "popd  > /dev/null" EXIT
+
 METADATA_DIR=".hash-fixation-metadata"
 TREE_FILE=$METADATA_DIR/"tree.txt"
 HASHES_FILE=$METADATA_DIR/"hashes.txt"
